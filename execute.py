@@ -14,6 +14,8 @@ style = styles.Style(
     ],
 )
 
+
+
 def get_polygon(cell):
     boundary = h3.cell_to_boundary(cell)
     boundary = [(point[1], point[0]) for point in boundary]
@@ -50,5 +52,22 @@ for cell in grid:
 subcells = h3.cell_to_children(index_cell, 3)
 for cell in subcells:
     f.append(get_polygon(cell))
+
+f = kml.Folder(ns, "demo-02", "demo-02", "Fill")
+d.append(f)
+
+polygon = h3.Polygon([
+    (60.02391645600531, -0.3430354081177367),
+            (40.1707976009983, -0.009414353420653665),
+            (39.91109045124764, 40.04738143919038),
+            (60.16124949895904, 39.74529217243451),
+            (60.02391645600531,-0.3430354081177367),
+        ])
+
+grid = h3.polygon_to_cells(polygon, 2)
+for cell in grid:
+    f.append(get_polygon(cell))
+
+d.append(f)
 
 print(k.to_string(prettyprint=True))
