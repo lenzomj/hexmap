@@ -1,0 +1,115 @@
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document id="docid" targetId="doc name">
+    <name>doc description</name>
+    <visibility>1</visibility>
+    <Style id="default">
+      <PolyStyle>
+        <color>ff0000ff</color>
+        <colorMode>random</colorMode>
+        <fill>0</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Folder id="fid" targetId="f name">
+      <name>f description</name>
+      <visibility>1</visibility>
+      <Placemark id="821e5ffffffffff" targetId="821e5ffffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>28.956125,46.940583 27.961374,45.468587 29.387082,44.107766 31.765884,44.203681 32.802663,45.655674 31.422272,47.031920 28.956125,46.940583</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="821e5ffffffffff" targetId="821e5ffffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>28.956125,46.940583 27.961374,45.468587 29.387082,44.107766 31.765884,44.203681 32.802663,45.655674 31.422272,47.031920 28.956125,46.940583</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="822d27fffffffff" targetId="822d27fffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>29.387082,44.107766 28.419296,42.593125 29.788911,41.195121 32.086152,41.296943 33.092042,42.790723 31.765884,44.203681 29.387082,44.107766</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="821e47fffffffff" targetId="821e47fffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>28.492806,49.683116 27.469819,48.258057 28.956125,46.940583 31.422272,47.031920 32.491778,48.437419 31.052695,49.771325 28.492806,49.683116</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="821eeffffffffff" targetId="821eeffffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>25.532273,45.296738 24.614981,43.764510 26.072885,42.421413 28.419296,42.593125 29.387082,44.107766 27.961374,45.468587 25.532273,45.296738</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="821e4ffffffffff" targetId="821e4ffffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>32.491778,48.437419 31.422272,47.031920 32.802663,45.655674 35.197789,45.672385 36.299106,47.056314 34.977250,48.445115 32.491778,48.437419</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="822d2ffffffffff" targetId="822d2ffffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>32.802663,45.655674 31.765884,44.203681 33.092042,42.790723 35.403069,42.817985 36.468663,44.247648 35.197789,45.672385 32.802663,45.655674</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="821e57fffffffff" targetId="821e57fffffffff">
+        <name>Hex</name>
+        <visibility>1</visibility>
+        <styleUrl>#default</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <coordinates>24.952412,48.084867 24.013384,46.595885 25.532273,45.296738 27.961374,45.468587 28.956125,46.940583 27.469819,48.258057 24.952412,48.084867</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
+
