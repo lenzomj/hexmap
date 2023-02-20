@@ -14,15 +14,13 @@ style = styles.Style(
     ],
 )
 
-k = kml.KML()
-ns = "{http://www.opengis.net/kml/2.2}"
+def get_polygon(cell):
+    boundary = h3.cell_to_boundary(cell)
+    boundary = [(point[1], point[0]) for point in boundary]
 
-d = kml.Document(ns, "docid", "doc name", "doc description")
-d.append_style(style)
-k.append(d)
-
-f = kml.Folder(ns, "fid", "f name", "f description")
-d.append(f)
+    p = kml.Placemark(ns, cell, cell, cell, style_url="#default")
+    p.geometry = Polygon(boundary)
+    return p
 
 # Resolution: 9 = 0.2 nmi
 # Resolution: 8 = 0.5 nmi
@@ -31,22 +29,26 @@ d.append(f)
 # Resolution: 2 = 180 nmi
 # Resolution: 1 = 468 nmi
 
-def get_polygon(cell):
-    # index = h3.h3_to_string(cell)
-    boundary = h3.cell_to_boundary(cell)
-    boundary = [(point[1], point[0]) for point in boundary]
+k = kml.KML()
+ns = "{http://www.opengis.net/kml/2.2}"
 
-    p = kml.Placemark(ns, cell, cell, "Hex", style_url="#default")
-    p.geometry = Polygon(boundary)
-    return p
+d = kml.Document(ns, "Demo", "Demo", "Demonstrate H3")
+d.append_style(style)
+k.append(d)
 
+f = kml.Folder(ns, "demo-01", "demo-01", "Hierarchy")
+d.append(f)
 
 lat, lng = 39.758949, -84.191605
-cell = h3.latlng_to_cell(lat, lng, 2)
-f.append(get_polygon(cell))
+index_cell = h3.latlng_to_cell(lat, lng, 2)
+f.append(get_polygon(index_cell))
 
-grid = h3.grid_disk(cell, 1)
-for unit in grid:
-    f.append(get_polygon(unit))
+grid = h3.grid_disk(index_cell, 1)
+for cell in grid:
+    f.append(get_polygon(cell))
+
+subcells = h3.cell_to_children(index_cell, 3)
+for cell in subcells:
+    f.append(get_polygon(cell))
 
 print(k.to_string(prettyprint=True))
